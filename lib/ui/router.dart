@@ -6,6 +6,7 @@ import 'package:project_workshop_kawal_desa/ui/views/dashboard_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/login_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/report_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/sign_up_view.dart';
+import 'package:project_workshop_kawal_desa/ui/views/trajectory_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings){
   switch(settings.name){
@@ -37,6 +38,18 @@ Route<dynamic> generateRoute(RouteSettings settings){
         routeName: settings.name,
         viewToShow: ReportView()
       );
+      //Tidak ada dalam video materi
+    // case AbsenViewRoute:
+    //   return _pageRoute(
+    //     routeName: settings.name,
+    //     viewToShow: AbsenView()
+    //   );
+    case TrajectoryViewRoute:
+      return _pageRoute(
+        routeName: settings.name,
+        viewToShow: TrajectoryView()
+      );
+
     default:
       return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -45,10 +45,18 @@ class DashboardView extends StatelessWidget {
                           horizontalSpaceMedium,
                           MaterialButton(
                               onPressed: (){
-                                model.goAnotherView(AbsenViewRoute);
+                                model.goAnotherView(ReportViewRoute);
                               },
                             child: Text(
                               "Pelaporan"
+                            ),
+                          ),
+                          MaterialButton(
+                            onPressed: (){
+                              model.goAnotherView(TrajectoryViewRoute);
+                            },
+                            child: Text(
+                                "Trajectory"
                             ),
                           ),
                         ],

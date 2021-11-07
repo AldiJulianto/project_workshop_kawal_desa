@@ -7,6 +7,7 @@ import 'package:project_workshop_kawal_desa/constants/const.dart';
 import 'package:project_workshop_kawal_desa/models/company_unit_data.dart';
 import 'package:project_workshop_kawal_desa/models/login_model_data.dart';
 import 'package:project_workshop_kawal_desa/models/register_model_data.dart';
+import 'package:project_workshop_kawal_desa/models/report_data.dart';
 
 class ApiService{
   Future<CompanyUnitData> getCompanyUnit(String companyCode) async{
@@ -106,6 +107,24 @@ class ApiService{
       return userData;
     } catch (e){
       print('[Login] Error Occurred $e');
+      return null;
+    }
+  }
+
+  //Membutuhkan import dari report data di model
+  Future<ReportData> getReport(
+      String company,
+      String guid,
+      int page
+      ) async {
+    final client = http.Client();
+    try {
+      final reportUrl = '';
+      final response = await client.get(reportUrl);
+      final reportData = reportDataFromJson(response.body);
+      return reportData;
+    } catch (e) {
+      print('[getReport] error occured $e');
       return null;
     }
   }

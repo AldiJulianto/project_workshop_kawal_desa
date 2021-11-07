@@ -4,6 +4,7 @@ import 'package:project_workshop_kawal_desa/constants/route_name.dart';
 import 'package:project_workshop_kawal_desa/ui/views/camera_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/dashboard_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/login_view.dart';
+import 'package:project_workshop_kawal_desa/ui/views/report_view.dart';
 import 'package:project_workshop_kawal_desa/ui/views/sign_up_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings){
@@ -30,6 +31,11 @@ Route<dynamic> generateRoute(RouteSettings settings){
       return _pageRoute(
         routeName: settings.name,
         viewToShow: DashboardView()
+      );
+    case ReportViewRoute:
+      return _pageRoute(
+        routeName: settings.name,
+        viewToShow: ReportView()
       );
     default:
       return MaterialPageRoute(

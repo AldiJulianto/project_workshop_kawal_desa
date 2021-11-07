@@ -78,7 +78,7 @@ class CameraViewModel extends BaseModel{
       final path = join(
           (await getTemporaryDirectory()).path,
           '${dateFormat.toString()}-PPTIK.png');
-      //await controller.takePicture(path);
+      await controller.takePicture(path);
       print('Explorer ${directory.path}');
       _navigationService.popUpWithValue('$path#$fileName');
     } catch (e){

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_workshop_kawal_desa/constants/route_name.dart';
 import 'package:project_workshop_kawal_desa/ui/shared/ui_helper.dart';
 import 'package:project_workshop_kawal_desa/viewmodels/dashboard_view_model.dart';
 import 'package:stacked/stacked.dart';
@@ -43,7 +44,9 @@ class DashboardView extends StatelessWidget {
                           ),
                           horizontalSpaceMedium,
                           MaterialButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                model.goAnotherView(AbsenViewRoute);
+                              },
                             child: Text(
                               "Pelaporan"
                             ),
